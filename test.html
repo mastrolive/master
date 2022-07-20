@@ -14,11 +14,9 @@ const ui = video['ui'];
 const controls = ui.getControls(); 
 const player = controls.getPlayer(); 
 player.configure({
-  drm: {
-    "org.w3.clearkey": {
-      "persistentState": false
-    }
-  }
+  {
+"manifest": {
+    "mpd": true,
 });
 //player.configure({drm:{servers:{'com.widevine.alpha':'https://mrpw.ptmnc01.verspective.net/?deviceId=ZWQ0NjNlZDctNzI1Yy0zY2JlLTg3N2UtOGQ0MTU5MTc0Y2Nh'}}}); 
 window.player = player; 
